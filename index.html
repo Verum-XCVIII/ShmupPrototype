@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="XCVIII">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shmup Prototype</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+
+
+  <div id="menu-Main">
+    <table id="mmBtnContainer">
+      <tr><td id="mmTd2"><button class="unselectable" id="mmBtn-PlayInf" onClick="menu.menuToggle('main');">Play</button></td></tr>
+      <tr><td>
+        Controls<br /><hr style="margin: 0.5em 4.6em 0.5em 4.6em"/>
+        W/A/S/D - Movement<br />
+        Space Bar - Shoot<br /><br /><br />
+        Debug Controls<br /><hr style="margin: 0.5em 4.6em 0.5em 4.6em"/>
+        1/2/3 - Change firing mode<br />
+        H - Display Hitboxes
+      </td></tr>
+    </table>
+  </div>
+
+
+  <div id="menu-Pause">
+    <table id="pmBtnContainer">
+      <!-- <tr><td><button class="unselectable" id="pmBtn-MainMenu" onClick="menu.menuToggle('main');">Main Menu</button></td></tr> -->
+      <tr><td><button class="unselectable" id="pmBtn-Restart" onClick="location.reload();">Restart</button></td></tr>
+      <tr><td class="unselectable"><hr id="pmHr" /></td></tr>
+      <tr><td><button class="unselectable" id="pmBtn-Resume" onClick="menu.menuToggle('pause');">Resume</button></td></tr>
+    </table>
+  </div>
+
+
+  <button id="uiBtn-Pause" onClick="menu.menuToggle('pause');">
+    <hr class="pmIcon"/><br/>
+    <hr class="pmIcon"/><br/>
+    <hr class="pmIcon"/>
+  </button>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+  <script src="./sourceCode/basicVariablesAndFunctions.js"></script>
+  <script src="./sourceCode/player.js"></script>
+  <script src="./sourceCode/enemy.js"></script>
+  <script src="./sourceCode/projectile.js"></script>
+  <script src="./sourceCode/background.js"></script>
+  <script src="./sourceCode/interface.js"></script>
+
+</body>
+</html>
